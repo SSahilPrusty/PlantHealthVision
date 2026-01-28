@@ -98,7 +98,7 @@ new Chart(document.getElementById("diseaseChart"), {
 
 
 function logout(){
-  if(confirm("Logout from PlantCare Doctor Panel?")){
+  if(confirm("Logout from PlantCare Admin Panel?")){
     window.location.href = "/frontpage/index.html";
   }
 }
