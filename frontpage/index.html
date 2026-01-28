@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PlantCare | Smart Plant Disease Detection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- MAIN CSS (same folder) -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="bg-effects">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<header>
+    <h1>🍎 PlantCare</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#login">Login / Signup</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h2>AI-Powered <span>Plant Disease Detection</span></h2>
+        <p>
+            Upload a plant leaf image and get accurate plant species identification,
+            disease detection, and scientifically validated treatment methods.
+        </p>
+
+        <!-- GO TO SIGNUP PAGE -->
+        <a href="../login-signup/signup.html" class="magnet">Get Started</a>
+    </div>
+
+    <div class="hero-fruit">
+        <div class="fruit">
+            <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" alt="Apple">
+            <img src="https://cdn-icons-png.flaticon.com/512/135/135620.png" class="orange" alt="Orange">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <h2>System Roles</h2>
+    <div class="role-container">
+        <div class="role-card">
+            <h3>User</h3>
+            <p>Upload leaf images, view AI-generated disease reports, and follow recommended treatment procedures.</p>
+        </div>
+        <div class="role-card">
+            <h3>Doctor</h3>
+            <p>Analyze detected diseases and add new treatment solutions, medicines, organic methods, and preventive guidelines.</p>
+        </div>
+        <div class="role-card">
+            <h3>Admin</h3>
+            <p>Manage users, doctors, disease datasets, AI models, and system configuration.</p>
+        </div>
+    </div>
+</section>
+
+<section id="login">
+    <h2>Choose Login Role</h2>
+    <div class="role-container">
+        <div class="role-card">
+            <h3>User Login</h3>
+            <p>Upload leaf images and view AI reports.</p>
+            <a href="../login-signup/login.html" class="magnet">Login as User</a>
+        </div>
+        <div class="role-card">
+            <h3>Doctor Login</h3>
+            <p>Add treatment solutions and analysis.</p>
+            <a href="../login-signup/login.html" class="magnet">Login as Doctor</a>
+        </div>
+        <div class="role-card">
+            <h3>Admin Login</h3>
+            <p>System and AI model management.</p>
+            <a href="../login-signup/login.html" class="magnet">Login as Admin</a>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="footer-grid">
+        <div>
+            <h4>About Project</h4>
+            <p>
+                PlantCare AI is a smart agriculture platform that uses Artificial Intelligence
+                to detect plant diseases from leaf images and provide expert-approved
+                treatment solutions to farmers.
+            </p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Email: plantcareai@gmail.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: India</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="../login-signup/login.html">Login</a><br>
+            <a href="../login-signup/signup.html">Signup</a><br>
+            <a href="#features">System Roles</a>
+        </div>
+    </div>
+
+    <div class="copy">
+        © 2026 PlantCare AI | AWS PlantCare Project
+    </div>
+</footer>
+
+<!-- MAIN JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

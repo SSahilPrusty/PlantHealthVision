@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PlantCare AI | User Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND DOTS -->
+<div class="dot" style="left:10%"></div>
+<div class="dot" style="left:30%"></div>
+<div class="dot" style="left:50%"></div>
+<div class="dot" style="left:70%"></div>
+<div class="dot" style="left:90%"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">Plant<span>Care</span> AI</div>
+  <button class="logout" id="logoutBtn">Logout</button>
+</div>
+
+<div class="main">
+
+  <div class="panel">
+    <div class="dashboard-badge">👤 User Dashboard</div>
+    <div class="dashboard-title">Leaf Scan Panel</div>
+
+    <div>
+      <div class="upload" id="upload">
+        <p>📷 Click to upload<br><span>Leaf image</span></p>
+        <input type="file" id="file" accept="image/*">
+      </div>
+
+      <div class="preview-wrap">
+        <img id="preview" class="preview">
+        <div class="img-scan" id="imgScan"></div>
+      </div>
+    </div>
+
+    <button id="scanBtn" class="start" disabled>🔍 START SCAN</button>
+  </div>
+
+  <div class="doctor">
+    <div class="apple-wrap">
+      <img class="apple-img"
+        src="https://cdn-icons-png.flaticon.com/512/415/415733.png">
+      <div class="scan-ring"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- RESULT SECTION -->
+<div class="result" id="result">
+  <div class="result-box">
+    <h2>🧪 Disease Diagnosis Report</h2>
+
+    <p><strong>Disease:</strong> <span id="diseaseName">---</span></p>
+    <p><strong>Confidence:</strong> <span id="confidenceValue">0%</span></p>
+
+    <div class="confidence-bar">
+      <div id="confidenceBar"></div>
+    </div>
+
+    <div class="solutions">
+      <div class="sol">
+        <h3>🌿 AI Treatment</h3>
+        <p id="treatmentText">---</p>
+      </div>
+
+      <div class="sol">
+        <h3>🛡 Prevention Tips</h3>
+        <p id="preventionText">---</p>
+      </div>
+    </div>
+
+    <button class="start" id="scanAgainBtn">Scan Again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

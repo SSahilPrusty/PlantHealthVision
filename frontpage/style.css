@@ -1,0 +1,217 @@
+:root{
+    --primary:#4CAF50;
+    --light-green:#7CFF9B;
+    --glass:rgba(255,255,255,0.12);
+    --border:rgba(255,255,255,0.2);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{ scroll-behavior:smooth; }
+
+body{
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color:#fff;
+}
+
+/* CANVAS BACKGROUND */
+#bg-canvas{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+}
+
+/* SOFT BLOBS */
+.bg-effects{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.bg-effects span{
+    position:absolute;
+    width:380px;
+    height:380px;
+    background:rgba(76,175,80,0.15);
+    filter:blur(120px);
+    border-radius:50%;
+    animation:moveBlob 20s linear infinite;
+}
+
+.bg-effects span:nth-child(1){ top:10%; left:15%; }
+.bg-effects span:nth-child(2){ bottom:15%; right:20%; }
+.bg-effects span:nth-child(3){ top:40%; right:45%; }
+
+@keyframes moveBlob{
+    0%,100%{ transform:translate(0,0); }
+    50%{ transform:translate(120px,-80px); }
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter: blur(12px);
+    background:rgba(0,0,0,0.6);
+    z-index:999; /* VERY IMPORTANT */
+}
+
+header h1{ color:var(--primary); }
+
+nav a{
+    margin:0 18px;
+    text-decoration:none;
+    color:#e5e7eb;
+    transition:.3s;
+}
+nav a:hover{ color:var(--light-green); }
+
+/* BUTTON */
+.magnet{
+    --tx:0px; --ty:0px;
+    display:inline-flex;
+    padding:14px 30px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#4CAF50,#22c55e);
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    transform:translate(var(--tx),var(--ty)) scale(1);
+    transition:transform .25s, box-shadow .25s;
+    position:relative;
+}
+
+.magnet::after{
+    content:'';
+    position:absolute;
+    inset:-6px;
+    border-radius:inherit;
+    opacity:0;
+    box-shadow:0 0 22px rgba(76,175,80,.85);
+    transition:.25s;
+}
+
+.magnet:hover{
+    transform:translate(var(--tx),calc(var(--ty) - 6px)) scale(1.08);
+}
+.magnet:hover::after{ opacity:1; }
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    padding:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.hero-text{
+    max-width:600px;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero-text h2{ font-size:54px; margin-bottom:20px; }
+.hero-text span{ color:var(--primary); }
+.hero-text p{ color:#cbd5f5; font-size:18px; margin-bottom:35px; }
+
+/* FRUIT */
+.hero-fruit{
+    width:420px;
+    perspective:1200px;
+    animation:float 5s ease-in-out infinite;
+}
+
+.fruit{
+    position:relative;
+    width:100%;
+    transform-style:preserve-3d;
+    transition:transform .9s;
+}
+
+.hero-fruit:hover .fruit{ transform:rotateY(180deg); }
+
+.fruit img{
+    width:100%;
+    position:absolute;
+    backface-visibility:hidden;
+}
+
+.orange{ transform:rotateY(180deg); }
+
+/* SECTIONS */
+section{ padding:100px 80px; }
+section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+/* ROLE CARDS */
+.role-container{
+    display:flex;
+    gap:30px;
+}
+
+.role-card{
+    flex:1;
+    background:var(--glass);
+    border:1px solid var(--border);
+    backdrop-filter: blur(15px);
+    padding:40px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.role-card:hover{ transform:translateY(-15px); }
+
+.role-card h3{ color:var(--primary); margin-bottom:15px; }
+.role-card p{ color:#d1d5db; line-height:1.6; }
+
+/* FOOTER */
+footer{
+    background:#020617;
+    padding:70px 80px;
+    border-top:1px solid #1e293b;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+footer h4{ color:var(--primary); }
+footer p, footer a{ color:#9ca3af; font-size:14px; text-decoration:none; }
+
+.copy{
+    text-align:center;
+    margin-top:50px;
+    color:#64748b;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+
+@media(max-width:900px){
+    .hero,.role-container{flex-direction:column;}
+    .hero-fruit{margin-top:40px;}
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Doctor Dashboard | PlantCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doctor.css">
+</head>
+
+<body>
+
+<!-- TOP -->
+<header class="topbar">
+  <div class="logo">🌱 Plant<span>Care</span></div>
+</header>
+
+<!-- GREETING -->
+<section class="greet">
+  <h2 id="greeting"></h2>
+  <p class="quote">
+    “The best doctors don’t just cure plants, they protect the future of farming.”
+  </p>
+</section>
+
+<main class="wrapper">
+
+  <!-- USER SCANS -->
+  <section class="card">
+    <h2>📷 User Leaf Scans</h2>
+    <p class="hint">
+      Leaf scans from users who requested expert guidance.
+    </p>
+
+    <div id="scanList"></div>
+  </section>
+
+  <!-- NEW DISEASE + SOLUTION -->
+  <section class="card">
+    <h2>🦠 Add New Disease & Solution</h2>
+
+    <label>Disease Name</label>
+    <input type="text" id="diseaseName" placeholder="e.g. Early Blight">
+
+    <label>Disease Leaf Image</label>
+    <input type="file" id="diseaseImage" accept="image/*">
+
+    <div class="image-preview" id="imageBox">
+      <img id="previewImg">
+      <div class="meta">
+        <span class="doctor-name">Dr. R. Sharma</span>
+        <span class="badge">✔ Verified Expert</span>
+      </div>
+    </div>
+
+    <label>Organic Treatment</label>
+    <textarea placeholder="Organic treatment steps..."></textarea>
+
+    <label>Chemical Treatment</label>
+    <textarea placeholder="Chemical treatment steps..."></textarea>
+
+    <button id="saveDisease">Save Disease & Solution</button>
+  </section>
+
+</main>
+
+<!-- FOOTER / HELP -->
+<footer class="footer">
+  <div class="footer-logo">🌱 Plant<span>Care</span></div>
+
+  <div class="footer-info">
+    <p><strong>Need Help?</strong></p>
+    <p>If you face any issue or want to report something, contact us:</p>
+
+    <p>📧 support@plantcare.com</p>
+    <p>📞 +91 98765 43210</p>
+    <p>📍 India</p>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</footer>
+
+<script src="doctor.js"></script>
+</body>
+</html>

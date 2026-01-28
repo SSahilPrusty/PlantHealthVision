@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard | PlantCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin-style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>🌱 PlantCare</h2>
+  <nav>
+    <a class="active">Dashboard</a>
+    <a>User Management</a>
+    <a>Doctor Management</a>
+    <a>Disease Database</a>
+    <a>Scan Monitoring</a>
+    <a>Feedback</a>
+    <a>Settings</a>
+    <a class="logout" onclick="logout()">Logout</a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="greeting">
+      <h1 id="greetingText">Welcome 👋</h1>
+      <p id="subGreeting">Have a productive day</p>
+    </div>
+    <span class="admin">👑 Super Admin</span>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="card">
+      <h3>👤 Total Users</h3>
+      <p>1248</p>
+    </div>
+    <div class="card">
+      <h3>🧑‍⚕️ Total Doctors</h3>
+      <p>42</p>
+    </div>
+    <div class="card">
+      <h3>🌿 Total Scans</h3>
+      <p>6930</p>
+    </div>
+    <div class="card">
+      <h3>🦠 Diseases Found</h3>
+      <p>18</p>
+    </div>
+  </section>
+
+  <!-- CHARTS -->
+  <section class="charts">
+    <div class="chart-box">
+      <h3>📈 Daily Scan Uploads</h3>
+      <canvas id="uploadChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>🦠 Disease Frequency</h3>
+      <canvas id="diseaseChart"></canvas>
+    </div>
+  </section>
+
+  <!-- ACTIVITY -->
+  <section class="activity">
+    <h3>📝 Recent Activity</h3>
+    <ul>
+      <li>✔ New user registered</li>
+      <li>✔ Leaf scan uploaded</li>
+      <li>🧑‍⚕️ Doctor approved</li>
+      <li>⚠ Wrong prediction flagged</li>
+    </ul>
+  </section>
+
+</main>
+
+<script src="admin-script.js"></script>
+</body>
+</html>

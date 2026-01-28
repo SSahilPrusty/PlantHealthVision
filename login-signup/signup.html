@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup | PlantCare</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <h2>🌱 Plant<span>Care</span></h2>
+            <p class="sub">Register your account</p>
+            <label>Select Role</label>
+            <select id="roleSelector">
+                <option value="">-- Choose Role --</option>
+                <option value="user">User</option>
+                <option value="doctor">Plant Doctor</option>
+                <option value="admin">Administrator</option>
+            </select>
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com">
+
+            <label>Create Password</label>
+            <input type="password" id="password" placeholder="••••••••">
+
+            <button onclick="signup()">Create Account</button>
+            <p class="switch">Have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>
