@@ -12,7 +12,7 @@ CORS(app)
 # --- CONFIGURATION ---
 # Replace the string below with your ACTUAL API key starting with AIza...
 # DO NOT include 'curl' or any other text from the Google snippet.
-GEMINI_API_KEY = "AIzaSyDKCz2CfZxec3oe9VDey2I_2d5swCgkGk0"
+GEMINI_API_KEY = "USE_YOUR_API_KEY"
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
